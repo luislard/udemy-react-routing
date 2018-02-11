@@ -32,8 +32,9 @@ export default class Posts extends Component {
     }
 
     postSelectedHandler = (id) => {
-        this.props.history.push({pathName: '/' + id});
-        // this.props.history.push('/' + id);
+        console.log('hola');
+        this.props.history.push({pathname: '/posts/' + id});
+        // this.props.history.push('/posts/' + id);
     }
 
     render() {
@@ -41,7 +42,7 @@ export default class Posts extends Component {
         if (!this.state.error){
             posts = this.state.posts.map(post => {
                 return (
-                    // <Link to={'/' + post.id} key={post.id} >
+                    // <Link to={'/posts/' + post.id} key={post.id} >
                         <Post 
                         key={post.id}
                         clicked={() => {this.postSelectedHandler(post.id)}}
