@@ -41,6 +41,7 @@ export default class Posts extends Component {
                     clicked={() => {this.postSelectedHandler(post.id)}}
                     title={post.title} 
                     key={post.id} 
+                    {...this.props}
                     author={post.author}/>
             });
         }
