@@ -10,6 +10,7 @@ export default class Posts extends Component {
     }
 
     componentDidMount(){
+        console.log(this.props);
         axios.get('/posts')
             .then(response => {
                 const posts = response.data.slice(0,4);
