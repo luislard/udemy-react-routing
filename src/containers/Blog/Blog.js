@@ -21,6 +21,7 @@ class Blog extends Component {
                 {/* This is a comment in JSX */}
                 {/* <Route path="/" exact render={() => <h1>Home</h1>} />
                 <Route path="/" render={() => <h1>Home 2</h1>} /> */}
+                <Route path="/" exact component={Posts} />
             </div>
         );
     }
